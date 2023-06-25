@@ -4,9 +4,9 @@ student_heights = input("Please enter the heights of various students: ").split(
 
 for n in range(0, len(student_heights)):
     student_heights[n] = int(student_heights[n])
-# print(student_heights)
-# sum_student_heights = sum(student_heights)
-# len_students = len(student_heights)
+print(student_heights)
+sum_student_heights = sum(student_heights)
+len_students = len(student_heights)
 
 sum_student_heights = 0
 
