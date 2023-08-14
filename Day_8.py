@@ -55,40 +55,36 @@ while playing:
     shift = shift % 25
 
 
-    # def encrypt(message, move):
-    #     crypt_message = ""
-    #     for i in message:
-    #         position = alphabet.index(i)
-    #         new_position = position + move
-    #         crypt_text = alphabet[new_position]
-    #         crypt_message += crypt_text
-    #     print(f"The cypher message is {crypt_message}")
-    # # encrypt(message=text, move=shift)
+    def encrypt(message, move):
+        crypt_message = ""
+        for i in message:
+            position = alphabet.index(i)
+            new_position = position + move
+            crypt_text = alphabet[new_position]
+            crypt_message += crypt_text
+        print(f"The cypher message is {crypt_message}")
+    # encrypt(message=text, move=shift)
 
-    # def decrypt(message, move):
-    #     plain_message = ""
-    #     for i in message:
-    #         position = alphabet.index(i)
-    #         new_position = position - move
-    #         crypt_text = alphabet[new_position]
-    #         plain_message += crypt_text
-    #     print(f"The cypher message is {plain_message}")
-    # # decrypt(message=text, move=shift)
+    def decrypt(message, move):
+        plain_message = ""
+        for i in message:
+            position = alphabet.index(i)
+            new_position = position - move
+            crypt_text = alphabet[new_position]
+            plain_message += crypt_text
+        print(f"The cypher message is {plain_message}")
+    # decrypt(message=text, move=shift)
 
-    # if direction == "encode":
+    if direction == "encode":
 
-    #     encrypt(message=text, move=shift)
+        encrypt(message=text, move=shift)
 
-    # elif direction == "decode":
+    elif direction == "decode":
 
-    #     decrypt(message=text, move=shift)
+        decrypt(message=text, move=shift)
 
-    # else:
-    #     print("Enter a valid option")
-
-    
-
-            
+    else:
+        print("Enter a valid option")
     caesar(option=direction, message=text, move=shift)
     play = input("Do you want to go again Y/N: ").lower()
     if play != "y":
